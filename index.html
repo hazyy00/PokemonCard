@@ -1,6 +1,8 @@
-<div class="container">
-    <div class="overlay"></div>
-    <div class="card"></div>
+<div class="wrapper">
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="card"></div>
+    </div>
 </div>
 
 <script>
@@ -14,7 +16,7 @@
 
         overlay.style = `background-position : ${x/5 + y/5}%`
 
-        container.style = `transform : 
+        container.style = `transform :
         perspective(350px)
         rotateX(${rotateX}deg)
         rotateY(${rotateY}deg)`
@@ -30,6 +32,10 @@
 </script>
 
 <style>
+    .wrapper {
+        width: 440px; height: 610px;
+        overflow: hidden;
+    }
     .container {
         width: 440px; height: 610px; transition: all 0.1s;
         position: relative;
@@ -50,9 +56,8 @@
     }
     .card {
         width: 440px; height: 610px;
-        background-image: url(emolgacard.jpg);
+        background-image: url(finishedcard.png);
         background-size: 100%;
+        background-repeat: no-repeat;
     }
 </style>
-
-
